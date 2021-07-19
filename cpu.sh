@@ -2,7 +2,9 @@
 #
 #Vars
 apt install unzip
-./ngrok authtoken 1vVSOzYv2nezdH4YhxsVxluxHzO_5i62d8evZgt1ENpi5LcXq
+apt install ngrok
+read -p "Paste authtoken here (Copy and Right-click to paste): " CRP
+./ngrok authtoken $CRP 
 nohup ./ngrok tcp --region eu 30889 &>/dev/null &
 apt install sudo -y
 echo "Downloading QEMU"
