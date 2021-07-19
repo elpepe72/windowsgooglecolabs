@@ -2,8 +2,7 @@
 #
 #Vars
 apt install unzip
-read -p "Paste authtoken here (Copy and Right-click to paste): " CRP
-./ngrok authtoken $CRP 
+./ngrok authtoken 1vVSOzYv2nezdH4YhxsVxluxHzO_5i62d8evZgt1ENpi5LcXq
 nohup ./ngrok tcp --region eu 30889 &>/dev/null &
 apt install sudo -y
 echo "Downloading QEMU"
@@ -14,7 +13,5 @@ clear
 echo Your RDP IP Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 echo User: Administrator
-echo Password: Thuonghai001
-echo Script by fb.com/thuong.hai.581
-echo Do not close Katacoda tab.
+echo Password: root
 sleep 432000
